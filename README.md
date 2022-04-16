@@ -8,6 +8,8 @@ oc scale deploymentconfig app --replicas=2
 oc set resources dc app --requests='cpu=1000m,memory=1Gi' --limits='cpu=1000m,memory=1Gi'
 <BR>
 oc autoscale dc app --min 2 --max 8 --cpu-percent=50 -n demo-c
+<BR>
+oc get hpa app -n demo-c
 
 
 <BR>
