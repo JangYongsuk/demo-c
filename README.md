@@ -3,6 +3,8 @@
 Auto Scaling
 <BR>
 <BR>
+http://gitlab.ocp.demo.com/test/demo-c.git
+<BR>
 oc scale deploymentconfig app --replicas=2
 <BR>
 oc set resources dc app --requests='cpu=1000m,memory=1Gi' --limits='cpu=1000m,memory=1Gi'
