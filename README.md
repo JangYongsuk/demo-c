@@ -11,6 +11,11 @@ oc autoscale dc app --min 2 --max 8 --cpu-percent=50 -n demo-c
 <BR>
 oc get hpa app -n demo-c
 
+<BR>
+dd if=/dev/zero of=/dev/null
+<BR>
+<BR>
+ab -n 100 -c 10 http://app-demo-c.apps.ocp.demo.com/oom.jsp
 
 <BR>
 apiVersion: v1
