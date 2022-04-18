@@ -1,6 +1,6 @@
 # demo-c
 
-Demo C 코스
+Auto Scaling
 <BR>
 <BR>
 oc scale deploymentconfig app --replicas=2
