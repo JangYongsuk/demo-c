@@ -11,13 +11,15 @@ oc scale deploymentconfig app --replicas=2
 
 <b>Auto Scaling</b>
 <BR>
-oc set resources dc app --requests='cpu=1000m,memory=1Gi' --limits='cpu=1000m,memory=1Gi'
+oc set resources dc app --requests='cpu=1000m,memory=1Gi' --limits='cpu=2000m,memory=Gi'
 <BR>
 oc autoscale dc app --min 2 --max 8 --cpu-percent=50 -n demo-c
 <BR>
 oc get hpa app -n demo-c
 <BR>
 oc adm top pod -n demo-c
+<BR>
+watch -n 1 "oc get pod | grep Running"
 
 <BR>
 dd if=/dev/zero of=/dev/null
