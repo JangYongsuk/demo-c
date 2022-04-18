@@ -22,6 +22,8 @@ oc adm top pod -n demo-c
 watch -n 1 "oc get pod | grep Running"
 
 <BR>
+<b>부하생성</b>
+<BR>
 dd if=/dev/zero of=/dev/null
 <BR>
 <BR>
