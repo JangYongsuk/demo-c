@@ -27,7 +27,7 @@ watch -n 1 "oc get pod | grep Running"
 dd if=/dev/zero of=/dev/null
 <BR>
 <BR>
-ab -n 100 -c 10 http://app-demo-c.apps.ocp.demo.com/load.jsp
+ab -n 30000 -c 300 http://app-demo-c.apps.ocp.demo.com/load.jsp
 
 <BR>
 apiVersion: v1
