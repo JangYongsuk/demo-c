@@ -29,18 +29,4 @@ dd if=/dev/zero of=/dev/null
 <BR>
 ab -n 50000 -c 500 http://app-demo-c.apps.ocp.demo.com/load.jsp
 
-<BR>
-apiVersion: v1
-kind: ResourceQuota
-metadata:
-  name: demo-quota
-  namespace: demo-quota
-spec:
-  hard:
-    limits.cpu: '4'
-    limits.memory: 4Gi
-    requests.cpu: '4'
-    requests.memory: 4Gi
-  scopes:
-    - NotTerminating
     
