@@ -27,6 +27,6 @@ watch -n 1 "oc get pod | grep Running"
 dd if=/dev/zero of=/dev/null
 <BR>
 <BR>
-ab -n 50000 -c 1000 -t 600 -s 60 http://app-demo-c.apps.ocp.demo.com/load.jsp
+ab -n 50000 -c 1000 http://app-demo-c.apps.ocp.demo.com/load.jsp
 
     
